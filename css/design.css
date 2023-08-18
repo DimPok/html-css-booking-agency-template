@@ -1,0 +1,402 @@
+:root {
+    --mainFont:  'Lato', sans-serif; 
+    --primary: rgb(17, 44, 119);
+    --dark: #484848;
+    --light: #ffffff;
+}
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--mainFont);
+}
+
+.gorodangelov {
+    color: #274154;
+}
+
+
+.class {
+    color: #DA595e;
+}
+
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--dark);
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.graphelement {
+    height: 100vh;
+    background: url(../img/mainbg.png);
+    background-position: bottom center;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 150px auto;
+}
+
+
+header {
+    display: grid;
+    grid-template-columns: 10% auto 30%;
+    width: 100%;
+    padding: 1rem;
+    align-items:center;
+}
+
+
+header img {
+    width: 120px;
+}
+
+
+.navigator {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navigator {
+        grid-column: 4 / 5;
+    
+        display: grid;
+        justify-content: flex-end;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    
+    .navigator a {
+        color: var(--light);
+        font-size: 1.04rem;
+        font-weight: 300;
+        text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+        text-decoration: none;
+        padding: 1rem 1rem 2rem 1rem;
+        text-align: center;
+    }
+    
+    
+    .navigator a:hover {
+        border-bottom: 1px solid var(--light);
+    }
+}
+
+
+.search-form-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+    .search-form-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+}
+
+
+.search-form {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+
+.search-form h1 {
+    margin: 0 0 1rem 0;
+}
+
+
+.search-form form {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+
+.search-form .field {
+    display: grid;
+    grid-column: 1 / 3;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: .5rem;
+}
+
+
+.search-form .dates {
+    grid-row: 2 / 3;
+}
+
+
+.search-form .date {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: .5rem;
+}
+
+
+.search-form .date:nth-child(1) {
+    grid-column: 1 / 2;
+}
+
+.search-form .date:nth-child(2) {
+     grid-column: 2 / 3;
+}
+
+
+.search-form label {
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.search-form input[type="text"],
+.search-form input[type="date"],
+.search-form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: .7rem;
+    border: 1px solid #e1e1e1;
+    background-color: #ffffff;
+}
+
+
+.submit {
+    grid-column: 2 / 3;
+    display: grid;
+    justify-content: flex-end;
+}
+
+
+.submitBtn {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border:none;
+}
+
+
+main > section {
+    margin-bottom: 2rem;
+}
+
+
+.card-container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+
+.card img {
+    width: 100%;
+}
+
+
+.card .gorodangelov {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+.cennikgorodangelov {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.card .barcelona {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+.cennikbarcelona {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.budgetzasgolovok {
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+
+.budgetcennik {
+    font-size: 1rem;
+    font-weight: 700;
+    font-weight: bold;
+    color: #F94C10;
+}
+
+
+.rekommendgoroda .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+.rekommendgoroda .card {
+    position: relative;
+}
+
+
+
+.rekommendgoroda .primechanie {
+    position: absolute;
+    width: 100%;
+    bottom: 1rem;
+    left: 0;
+    color: var(--light);
+    text-align: center;
+}
+
+
+.rekommendgoroda .primechanie .title {
+    font-size: 2rem;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.rekommendgoroda .primechanie .cennik {
+    font-size: 1.7rem;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+    font-weight: bold;
+}
+
+
+
+
+footer .podval {
+    border-top: 1px solid #F8F4EA;
+    padding: 3rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: -100%;
+    background-color: var(--light);
+}
+
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+
+}
+
+
+.nav-footer .podvalnavigator {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, auto);
+    grid-row-gap: 1rem;
+}
+
+
+.nav-footer .podvalnavigator a{
+     color: var(--dark);
+     text-decoration: none;
+     display: block;
+     font-size: .9rem;
+}
+
+
+.nav-footer h3 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.nav-footer .podvalnavigator a .obnovlenie {
+    background-color: rgb(0, 119, 126);
+    margin-left: 1rem;
+    padding: .2rem .4rem;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+
+
+.social-nav a::before {
+   font-family: "Font Awesome 5 Brands";
+   color: var(--dark);
+   font-size: 1.7rem;
+}
+
+
+.social-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 35px);
+    justify-content: flex-end;
+    grid-column-gap: 1rem;
+}
+
+.social-nav a {
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+
+.social-nav a:last-of-type {
+    margin-right: 0;
+}
+
+
+.social-nav a[href*='instagram.com']::before {
+    content: '\f16d';
+
+}
+
+.social-nav a[href*='vk.com']::before {
+    content: '\f189';
+}
+
+
+.social-nav a[href*='telegram.org']::before {
+    content: '\f2c6';
+}
+
+
+.social-nav a span {
+   display: none;
+}
+
+
+.copyright {
+    background-color: var(--light);
+    margin: 1rem 0;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+}

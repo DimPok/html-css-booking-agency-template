@@ -1,0 +1,1 @@
+This template was made in HTML and CSS for a hotel booking and apartment rental business. It is simple, stylish and user-friendly. Ready for SEO and mobile devices. If someone wants to use the template for their own purposes, they can replace the titles, pictures and links with their own
